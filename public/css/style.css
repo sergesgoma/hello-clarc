@@ -98,6 +98,7 @@ section#recycle-banner {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  
 }
 
 #recycle-banner img {
@@ -111,6 +112,7 @@ section#recycle-banner {
 
 #recycle-banner h2 {
   transform: scale(3.5);
+    
 }
 
 /* @keyframes rotation {
@@ -329,7 +331,7 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   background-color: #8222ff;
   border-radius: 30px;
-  transition: 0.4s ease-in-out all;
+  transition: 0.5s ease-in-out all;
 }
 
 .d-block {
