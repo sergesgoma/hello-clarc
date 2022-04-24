@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Clarc</title>
+  </head>
+  <body>
+    <section id="form">
+      <div class="container">
+        <progress value="0" max="100" id="progress"></progress>
+        <form action="/form" method="post">
+          <div id="form-1">
+            <label for="email" class="d-block">Votre Email</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="myemail@gmail.com"
+            />
+            <button type="button" id="buttonOne">Valider</button>
+          </div>
+          <div id="form-2">
+            <label for="name" class="d-block">Votre Nom</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Jean Dupont"
+            />
+            <button type="button" id="buttonTwo">Valider</button>
+          </div>
+          <div id="form-3">
+            <label for="company" class="d-block">Votre Entreprise</label>
+            <input type="text" name="company" id="company" />
+            <button type="button" id="buttonThree">Valider</button>
+          </div>
+          <div id="form-4">
+            <label for="siren" class="d-block">Votre Siren</label>
+            <input type="text" name="siren" id="siren" />
+            <button type="button" id="buttonFour">Valider</button>
+          </div>
+          <div id="form-5">
+            <p>Quel âge a votre entreprise ?</p>
+            <div class="d-inline-block">
+              <input
+                type="radio"
+                name="seniority"
+                id="seniority_1"
+                value="less-than-1-year"
+              />
+              <label for="seniority_1">Moins d'un an d'ancienneté</label>
+            </div>
+            <div class="d-inline-block">
+              <input
+                type="radio"
+                name="seniority"
+                id="seniority_2"
+                value="more-than-1-year"
+              />
+              <label for="seniority_2">Plus d'un an d'ancienneté</label>
+            </div>
+            <button type="button" id="buttonFive" class="d-block">
+              Valider
+            </button>
+          </div>
+          <div id="form-6">
+            <p>Combien d'employés avez-vous ?</p>
+            <div class="d-inline-block">
+              <input
+                type="radio"
+                name="employeeNumber"
+                id="employeeNumber_1"
+                value="between-1-and-9"
+              />
+              <label for="employeeNumber_1">1 à 9 employés</label>
+            </div>
+            <div class="d-inline-block">
+              <input
+                type="radio"
+                name="employeeNumber"
+                id="employeeNumber_2"
+                value="between-10-and-49"
+              />
+              <label for="employeeNumber_2">10 à 49 employés</label>
+            </div>
+            <div class="d-inline-block">
+              <input
+                type="radio"
+                name="employeeNumber"
+                id="employeeNumber_3"
+                value="between-50-and-249"
+              />
+              <label for="employeeNumber_3">50 à 249 employés</label>
+            </div>
+            <div class="d-inline-block">
+              <input
+                type="radio"
+                name="employeeNumber"
+                id="employeeNumber_4"
+                value="more-than-250"
+              />
+              <label for="employeeNumber_4">250 employés ou plus</label>
+            </div>
+            <button type="button" id="buttonSix">Valider</button>
+          </div>
+          <button type="submit" id="buttonSubmit">Envoyer le formulaire</button>
+        </form>
+        <script>
+          const showButtonOne = document.getElementById("buttonOne");
+          const showButtonTwo = document.getElementById("buttonTwo");
+          const showButtonThree = document.getElementById("buttonThree");
+          const showButtonFour = document.getElementById("buttonFour");
+          const showButtonFive = document.getElementById("buttonFive");
+          const showButtonSix = document.getElementById("buttonSix");
+          const buttonSubmit = document.getElementById("buttonSubmit");
+
+          const formOne = document.getElementById("form-1");
+          const formTwo = document.getElementById("form-2");
+          const formThree = document.getElementById("form-3");
+          const formFour = document.getElementById("form-4");
+          const formFive = document.getElementById("form-5");
+          const formSix = document.getElementById("form-6");
+
+          const percent = document.getElementById("percent");
+          const progress = document.getElementById("progress");
+
+          showButtonOne.addEventListener("click", () => {
+            formOne.style.display = "none";
+            formTwo.style.display = "block";
+            formThree.style.display = "none";
+            formFour.style.display = "none";
+            formFive.style.display = "none";
+            formSix.style.display = "none";
+            document.getElementById("progress").value += 17;
+          });
+
+          showButtonTwo.addEventListener("click", () => {
+            formOne.style.display = "none";
+            formTwo.style.display = "none";
+            formThree.style.display = "block";
+            formFour.style.display = "none";
+            formFive.style.display = "none";
+            formSix.style.display = "none";
+            document.getElementById("progress").value += 17;
+          });
+
+          showButtonThree.addEventListener("click", () => {
+            formOne.style.display = "none";
+            formTwo.style.display = "none";
+            formThree.style.display = "none";
+            formFour.style.display = "block";
+            formFive.style.display = "none";
+            formSix.style.display = "none";
+            document.getElementById("progress").value += 17;
+          });
+
+          showButtonFour.addEventListener("click", () => {
+            formOne.style.display = "none";
+            formTwo.style.display = "none";
+            formThree.style.display = "none";
+            formFour.style.display = "none";
+            formFive.style.display = "block";
+            formSix.style.display = "none";
+            document.getElementById("progress").value += 17;
+          });
+
+          showButtonFive.addEventListener("click", () => {
+            formOne.style.display = "none";
+            formTwo.style.display = "none";
+            formThree.style.display = "none";
+            formFour.style.display = "none";
+            formFive.style.display = "none";
+            formSix.style.display = "block";
+            document.getElementById("progress").value += 17;
+          });
+
+          showButtonSix.addEventListener("click", () => {
+            formOne.style.display = "none";
+            formTwo.style.display = "none";
+            formThree.style.display = "none";
+            formFour.style.display = "none";
+            formFive.style.display = "none";
+            formSix.style.display = "none";
+            buttonSubmit.style.display = "block";
+            document.getElementById("progress").value += 15;
+          });
+        </script>
+        
+      </div><div class="return"><a href="/">Retour</a></div>
+    </section>
+    
+  </body>
+</html>
