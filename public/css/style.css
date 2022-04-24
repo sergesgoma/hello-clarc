@@ -329,6 +329,7 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   background-color: #8222ff;
   border-radius: 30px;
+  transition: 0.4s ease-in-out all;
 }
 
 .d-block {
